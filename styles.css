@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.seccion-nav ul {
+  padding: 0;
+  width: fit-content;
+  margin: auto;
+  text-align: left;
+}
+
+.seccion-nav h3 {
+  text-decoration: underline;
+}
+
+.seccion-nav {
+  font-size:.8em;
+  color: #eee;
+  /*margin-bottom: 2em;*/
+  padding: .5em;
+}
+
+.foto-perfil {
+  background-color: transparent;
+  width: 128px;
+  height: 128px;
+  margin: auto;
+}
+
+.foto-perfil-interior {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.foto-perfil:hover .foto-perfil-interior {
+  transform: rotateY(180deg);
+}
+
+.foto-perfil-frente, .foto-perfil-dorso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.foto-perfil-dorso {
+  transform: rotateY(180deg);
+}
+
+section {
+  display: -webkit-flex;
+  display: flex;
+  min-height: 100vh;
+}
+
+#informacion-contacto {
+  list-style-type: none;
+}
+
+.seccion-nav ul li {
+  margin: .5em;
+}
+
+#informacion-contacto a:link {
+  color: orange;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+nav {
+  -webkit-flex: 0.7;
+  -ms-flex: 0.7;
+  flex: 0.7;
+  background: #313131;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  min-width: 250px;
+}
+
+#div-interno {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 3px;
+}
+
+.icono-nav {
+  margin-right: 0.5em;
+}
+
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #eee;
+  padding: 20px;
+  color: #313131;
+}
+
+article h2 {
+  text-decoration: underline;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+#toggle-experiencia {
+  position: relative;
+  z-index: 1;
+}
+
+#toggle-experiencia:hover {
+  cursor: pointer;
+}
+
+.item-duracion {
+  color: #777;
+  font-weight: bold;
+  flex: 0.45;
+  min-width: 150px;
+}
+
+.item-contenido {
+  flex: 3;
+}
+
+.item-contenido p {
+  font-size: 14px;
+}
+
+.item-titulo-empresa {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.item-titulo-posicion {
+  margin: 0;
+  font-weight: bold;
+  color: #777;
+  font-size: 14px;
+}
+
+.seccion-article ul {
+  columns: 4;
+  -webkit-columns: 4;
+  -moz-columns: 4;
+}
+
+.item-experiencia {
+  display: flex;
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+#habilidades li {
+  margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .seccion-article ul {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+  }
+}
+
+@media (max-width: 468px) {
+  .seccion-article ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+}
